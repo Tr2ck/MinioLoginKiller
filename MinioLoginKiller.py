@@ -10,7 +10,7 @@ def send(url):
             'Content-Type':'application/json'
         }
         response = requests.post(url,data=json.dumps(form_data),headers = headers,timeout=10)
-        if "access" in response.text:
+        if "error" in response.text:
             pass
         else:
             print("[+]success    "+url+"       minioadmin/minioadmin")
